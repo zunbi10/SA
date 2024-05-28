@@ -64,7 +64,7 @@ export default function DevelopmentTable(props) {
           fontSize='22px'
           fontWeight='700'
           lineHeight='100%'>
-          Development Table
+          Bảng nhân viên
         </Text>
         <Menu />
       </Flex>
@@ -97,56 +97,25 @@ export default function DevelopmentTable(props) {
               <Tr {...row.getRowProps()} key={index}>
                 {row.cells.map((cell, index) => {
                   let data = "";
-                  if (cell.column.Header === "NAME") {
+                  if (cell.column.Header === "Mã số") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "TECH") {
-                    data = (
-                      <Flex align='center'>
-                        {cell.value.map((item, key) => {
-                          if (item === "apple") {
-                            return (
-                              <AppleLogo
-                                key={key}
-                                color={iconColor}
-                                me='16px'
-                                h='18px'
-                                w='15px'
-                              />
-                            );
-                          } else if (item === "android") {
-                            return (
-                              <AndroidLogo
-                                key={key}
-                                color={iconColor}
-                                me='16px'
-                                h='18px'
-                                w='16px'
-                              />
-                            );
-                          } else if (item === "windows") {
-                            return (
-                              <WindowsLogo
-                                key={key}
-                                color={iconColor}
-                                h='18px'
-                                w='19px'
-                              />
-                            );
-                          }
-                        })}
-                      </Flex>
-                    );
-                  } else if (cell.column.Header === "DATE") {
+                  } else if (cell.column.Header === "Tên") {
                     data = (
                       <Text color={textColor} fontSize='sm' fontWeight='700'>
                         {cell.value}
                       </Text>
                     );
-                  } else if (cell.column.Header === "PROGRESS") {
+                  } else if (cell.column.Header === "Phòng ban") {
+                    data = (
+                      <Text color={textColor} fontSize='sm' fontWeight='700'>
+                        {cell.value}
+                      </Text>
+                    );
+                  } else if (cell.column.Header === "Trạng thái") {
                     data = (
                       <Flex align='center'>
                         <Text
@@ -154,15 +123,15 @@ export default function DevelopmentTable(props) {
                           color={textColor}
                           fontSize='sm'
                           fontWeight='700'>
-                          {cell.value}%
+                          {cell.value}
                         </Text>
-                        <Progress
+                        {/* <Progress
                           variant='table'
                           colorScheme='brandScheme'
                           h='8px'
                           w='63px'
                           value={cell.value}
-                        />
+                        /> */}
                       </Flex>
                     );
                   }

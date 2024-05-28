@@ -1,20 +1,21 @@
 export const columnsDataDevelopment = [
   {
-    Header: "NAME",
+    Header: "Mã số",
     accessor: "name",
   },
   {
-    Header: "TECH",
+    Header: "Tên",
     accessor: "tech",
   },
   {
-    Header: "DATE",
+    Header: "Phòng ban",
     accessor: "date",
   },
   {
-    Header: "PROGRESS",
+    Header: "Trạng thái",
     accessor: "progress",
   },
+  
 ];
 
 export const columnsDataCheck = [
