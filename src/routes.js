@@ -14,6 +14,7 @@ import MainDashboard from "views/admin/default";
 import NFTMarketplace from "views/admin/marketplace";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/dataTables";
+import Customer from "views/admin/customer";
 import RTL from "views/admin/rtl";
 
 // Auth Imports
@@ -54,8 +55,8 @@ const routes = [
     name: "Khách hàng",
     layout: "/admin",
     icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path:"/default",
-    component: DataTables,
+    path:"/customer",
+    component: Customer,
   },
 
 
